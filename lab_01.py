@@ -70,7 +70,11 @@ def turno(x):
     
         imprimir(oculto)
     
-        A2=selector(Tablero)    
+        A2=selector(Tablero)
+        
+        while A==A2:
+            print('ya escogiste esa ficha')
+            A2=selector(Tablero)
     
         oculto[A2[0]][A2[1]]=Tablero[A2[0]][A2[1]]
     
@@ -112,9 +116,8 @@ oculto=division(oculto)
 Tablero=L
 Tablero=division(Tablero)
 
-for i in Tablero:
-        print(*i)
-    
+imprimir(oculto)
+
 contador=[cartas]
     
 while contador[0]!=0:
